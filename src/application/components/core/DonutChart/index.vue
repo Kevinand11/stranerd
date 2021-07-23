@@ -1,5 +1,5 @@
 <template>
-	<vc-donut
+	<Donut
 		background="white"
 		foreground="#D7E2EC"
 		:size="size"
@@ -15,14 +15,16 @@
 		<DynamicText class="score">
 			{{ formatNumber(score) }}
 		</DynamicText>
-	</vc-donut>
+	</Donut>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from '@nuxtjs/composition-api'
 import { formatNumber } from '@utils/commons'
+import Donut from './Donut.vue'
 export default defineComponent({
 	name: 'DonutChart',
+	components: { Donut },
 	props: {
 		size: {
 			required: false,

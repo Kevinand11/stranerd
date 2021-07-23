@@ -146,13 +146,14 @@ import { useUser } from '@app/hooks/users/user'
 import { formatNumber, pluralize } from '@utils/commons'
 import { formatTime } from '@utils/dates'
 import Tag from '@app/components/questions/tags/Tag.vue'
+import DonutChart from '@app/components/core/DonutChart/index.vue'
 import Subject from '@app/components/questions/subjects/Subject.vue'
 import { useAuth } from '@app/hooks/auth/auth'
 import { useSessionModal } from '@app/hooks/core/modals'
 import { setNewSessionTutorIdBio } from '@app/hooks/sessions/sessions'
 export default defineComponent({
 	name: 'ProfileLeftSidebar',
-	components: { Tag, Subject },
+	components: { Tag, Subject, DonutChart },
 	props: {
 		min: {
 			default: false,
